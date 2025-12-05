@@ -14,7 +14,6 @@ class SettingsViewController: UIViewController {
         tableView.backgroundColor = .systemMint
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCellId")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "RoutingCellId")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -44,7 +43,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 2
+        return 3
     }
 
     func tableView(
@@ -60,6 +59,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.textLabel?.text = "Notifications"
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "Data and Memory"
+        } else if indexPath.row == 2 {
+            cell.textLabel?.text = "AutoLayouts"
         }
         return cell
     }
@@ -71,12 +72,20 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         guard indexPath.section == 0 else { return }
         
         tableView.deselectRow(at: indexPath, animated: true)
-
-        let purpleViewController = PurpleViewController()
-        purpleViewController.value = 11
-        navigationController?.pushViewController(
-            purpleViewController,
-            animated: true
-        )
+        
+        if indexPath.row == 2 {
+            let autoLayoutViewController = AutoLayoutViewController()
+            navigationController?.pushViewController(
+                autoLayoutViewController,
+                animated: true
+            )
+        } else {
+            let purpleViewController = PurpleViewController()
+            purpleViewController.value = 11
+            navigationController?.pushViewController(
+                purpleViewController,
+                animated: true
+            )
+        }
     }
 }
