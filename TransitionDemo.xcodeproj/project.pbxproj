@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FAB4339E2F1BD5D90076110B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = FAB4339D2F1BD5D90076110B /* Moya */; };
+		FAB433A02F1BD5D90076110B /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = FAB4339F2F1BD5D90076110B /* ReactiveMoya */; };
+		FAB433A22F1BD5D90076110B /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = FAB433A12F1BD5D90076110B /* RxMoya */; };
+		FAB433AA2F1FD9AD0076110B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FAB433A92F1FD9AD0076110B /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FCBB4E352DBAB0B700448291 /* TransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB433AA2F1FD9AD0076110B /* Kingfisher in Frameworks */,
+				FAB433A22F1BD5D90076110B /* RxMoya in Frameworks */,
+				FAB433A02F1BD5D90076110B /* ReactiveMoya in Frameworks */,
+				FAB4339E2F1BD5D90076110B /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,10 @@
 			);
 			name = TransitionDemo;
 			packageProductDependencies = (
+				FAB4339D2F1BD5D90076110B /* Moya */,
+				FAB4339F2F1BD5D90076110B /* ReactiveMoya */,
+				FAB433A12F1BD5D90076110B /* RxMoya */,
+				FAB433A92F1FD9AD0076110B /* Kingfisher */,
 			);
 			productName = TransitionDemo;
 			productReference = FCBB4E352DBAB0B700448291 /* TransitionDemo.app */;
@@ -91,7 +106,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					FCBB4E342DBAB0B700448291 = {
 						CreatedOnToolsVersion = 16.2;
@@ -107,6 +122,10 @@
 			);
 			mainGroup = FCBB4E2C2DBAB0B700448291;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FAB4339C2F1BD5D90076110B /* XCRemoteSwiftPackageReference "Moya" */,
+				FAB433A82F1FD9AD0076110B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FCBB4E362DBAB0B700448291 /* Products */;
 			projectDirPath = "";
@@ -145,7 +164,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3W84AJ77MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransitionDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -156,6 +174,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZED_STRING_SWIFTUI_SUPPORT = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsaidov.TransitionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -172,7 +191,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3W84AJ77MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransitionDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -183,6 +201,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZED_STRING_SWIFTUI_SUPPORT = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsaidov.TransitionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -227,6 +246,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3W84AJ77MA;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -250,6 +270,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -290,6 +311,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3W84AJ77MA;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -306,6 +328,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -333,6 +356,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAB4339C2F1BD5D90076110B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		FAB433A82F1FD9AD0076110B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAB4339D2F1BD5D90076110B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB4339C2F1BD5D90076110B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		FAB4339F2F1BD5D90076110B /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB4339C2F1BD5D90076110B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		FAB433A12F1BD5D90076110B /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB4339C2F1BD5D90076110B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		FAB433A92F1FD9AD0076110B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB433A82F1FD9AD0076110B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCBB4E2D2DBAB0B700448291 /* Project object */;
 }

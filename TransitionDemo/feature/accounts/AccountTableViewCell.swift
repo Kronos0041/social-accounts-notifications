@@ -7,21 +7,28 @@
 
 
 import UIKit
+import Kingfisher
+
 
 class AccountTableViewCell: UITableViewCell {
     static let identifier = "AccountTableViewCell"
 
-    let iconImageView = UIImageView()
     let titleLabel = UILabel()
     let descriptionLabel = UILabel()
     let arrowImageView = UIImageView(image: UIImage(systemName: "chevron.right"))
+    
+    lazy var iconImageView: UIImageView = {
+        let iconImageView = UIImageView()
+        iconImageView.translatesAutoresizingMaskIntoConstraints = false
+        iconImageView.contentMode = .scaleAspectFill
+        iconImageView.frame.size = CGSize(width: 40, height: 40)
+        iconImageView.setRounded()
+        return iconImageView
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        iconImageView.contentMode = .scaleAspectFill
-
+        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         titleLabel.numberOfLines = 1
@@ -63,9 +70,15 @@ class AccountTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(icon: UIImage?, title: String, description: String) {
-        iconImageView.image = icon
+    func configure(
+        iconUrl: String,
+        title: String,
+        description: String?
+    ) {
+        iconImageView.kf.setImage(with: URL(string: iconUrl))
         titleLabel.text = title
-        descriptionLabel.text = description
+        if let safeDescription = description {
+            descriptionLabel.text = safeDescription
+        }
     }
 }
