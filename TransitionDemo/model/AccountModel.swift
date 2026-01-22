@@ -7,7 +7,7 @@
 
 
 struct AccountModel {
-    let iconName: String
+    let urlToImage: String
     let title: String
-    let subtitle: String
+    let subtitle: String?
 }

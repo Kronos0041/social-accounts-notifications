@@ -10,7 +10,7 @@ import UIKit
 class AccountInfoViewController: UIViewController {
     
     var accountName = "not found error!"
-    var accountDescription = "not found error!"
+    var accountDescription = ""
 
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var accountNameLabel: UILabel!
