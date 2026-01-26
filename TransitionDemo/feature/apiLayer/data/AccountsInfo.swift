@@ -19,6 +19,7 @@ struct AccountInfoItem : Codable, Identifiable, Hashable {
 extension AccountInfoItem {
     func mapToAccountModel () -> AccountModel {
         .init(
+            id: id,
             urlToImage: urlToImage,
             title: nickname,
             subtitle: phone,

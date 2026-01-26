@@ -11,6 +11,7 @@ import Alamofire
 
 enum MoyaNetwork {
     case getAllAccounts(userId: String)
+    case getProfile(profileId: String)
 }
 
 extension MoyaNetwork: TargetType {
@@ -22,6 +23,8 @@ extension MoyaNetwork: TargetType {
         switch self {
         case .getAllAccounts(let userId):
             return "/accounts"
+        case .getProfile(let profileId):
+            return "/profile"
         }
     }
     
@@ -33,6 +36,8 @@ extension MoyaNetwork: TargetType {
         switch self {
         case .getAllAccounts(let userId):
             return .requestParameters(parameters: ["userId": userId], encoding: URLEncoding.queryString)
+        case .getProfile(let profileId):
+            return .requestParameters(parameters: ["profileId": profileId], encoding: URLEncoding.queryString)
         }
     }
     

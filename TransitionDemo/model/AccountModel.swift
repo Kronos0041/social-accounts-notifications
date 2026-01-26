@@ -7,6 +7,7 @@
 
 
 struct AccountModel {
+    let id: String
     let urlToImage: String
     let title: String
     let subtitle: String?

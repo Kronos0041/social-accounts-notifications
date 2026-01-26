@@ -16,5 +16,14 @@ final class AccountsRepository {
             completion(result)
         }
     }
+    
+    func getProfile(
+        profileId: String,
+        completion: @escaping (Result<ProfileCodable, Error>) -> Void
+    ) {
+        moyaNetworkClient.request(request: .getProfile(profileId: profileId)) { (result: Result<ProfileCodable, Error>) in
+            completion(result)
+        }
+    }
 }
 
